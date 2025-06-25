@@ -1,0 +1,115 @@
+body {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1{
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#titledetail{
+  margin: 30px 0 30px 30px ;
+  font-size: 18px;
+}
+
+
+
+.list{
+  height: 360px;
+  border-right: 1px solid lightgray;
+}
+
+
+.request_container{
+  display: flex; /* Flexboxを有効にする */
+  flex-direction: row-reverse; 
+  flex-wrap: nowrap; /* 子要素を折り返さないようにする（重要！） */
+  overflow-x: auto; /* 横方向のスクロールバーは表示 */
+  width: 100%;
+  gap: 10px; /* 各要素間のスペース */
+
+}
+
+.eachrequest {
+    border-right: 1px solid #ccc; /* 見やすくするためのボーダー */
+    flex-shrink: 0; /* スペースが足りなくても縮まないようにする（重要！） */
+    width: 360px;
+    height: 320px;
+}
+
+.eachrequest p {
+  margin: 5px 0 5px 0 ;
+
+}
+
+
+
+form{
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid lightgray;
+}
+
+.form-group {
+  /* 各入力グループをフレックスコンテナにする */
+  display: flex;
+  /* アイテムを垂直方向に中央揃えにする（任意） */
+  align-items: center; 
+  /* ラベルと入力フィールドの間に少しスペースを空ける */
+  margin-bottom: 10px; 
+}
+
+.form-group label {
+  /* ラベルの幅を固定し、テキストを右寄せにする */
+  width: 280px; /* 必要に応じて調整 */
+  text-align: right;
+  /* ラベルと入力フィールドの間にスペースを作る */
+  margin-right: 10px; 
+  /* 必要であれば、ラベルの文字揃えを左に設定 */
+  /* text-align: left; */ 
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  /* 入力フィールドが残りのスペースを埋めるようにする */
+  flex-grow: 1; 
+  /* 必要に応じて最大幅を設定 */
+  max-width: 480px; /* 例: 必要に応じて調整 */
+}
+
+.header_title{
+  margin-bottom: 10px;
+  border-left: 8px solid lightgray;
+  padding-left: 8px;
+}
+
+
+button {
+  margin-top: 20px;
+  margin-left: 180px;
+  width: 80px;
+  height: 30px;
+}
+
+
+.administratorlink{
+  text-align: right;
+  margin-top: 5px;
+}
+
+a {
+
+  color: inherit;        /* 現在の文字色を継承する（または好きな色でもOK） */
+}
+
+
+a:active,
+a:hover,
+a:visited
+ {
+  color: inherit;        /* 状態が変わっても色を変えない */
+
+}

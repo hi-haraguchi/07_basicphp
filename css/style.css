@@ -1,0 +1,227 @@
+body {
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+
+header{
+  margin-top: 65px;
+  margin-bottom: 30px;
+}
+
+
+h2 {
+  position: relative;
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px solid gray;
+  background: #fff;
+  width: 78%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+h2:before,
+h2:after {
+  position: absolute;
+  content: '';
+}
+
+h2:before {
+  top: -60px;
+  left: calc(50% - 60px);
+  width: 120px;
+  height: 120px;
+  border: 2px solid gray;
+  border-radius: 50%;
+  background: #fff;
+  /* background: url('../img/pilebooks.png') no-repeat;
+  background-size: auto 40px; 
+  background-position: center 10px; */
+
+}
+
+h2:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: #fff;
+}
+
+img {
+  height: 40px;
+  width: auto;
+  margin-bottom: 8px;
+}
+
+h2 span {
+  top: -56px;
+  position: relative;
+  font-size: 40px;
+  background: #fff;
+  z-index: 2;
+}
+
+.header1{
+  font-size: 40px;
+}
+
+.header2{
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+form{
+  margin-left: 200px;
+}
+
+.form-group {
+  /* 各入力グループをフレックスコンテナにする */
+  display: flex;
+  /* アイテムを垂直方向に中央揃えにする（任意） */
+  align-items: center; 
+  /* ラベルと入力フィールドの間に少しスペースを空ける */
+  margin-bottom: 10px; 
+}
+
+.form-group label {
+  /* ラベルの幅を固定し、テキストを右寄せにする */
+  width: 280px; /* 必要に応じて調整 */
+  text-align: right;
+  /* ラベルと入力フィールドの間にスペースを作る */
+  margin-right: 10px; 
+  /* 必要であれば、ラベルの文字揃えを左に設定 */
+  /* text-align: left; */ 
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  /* 入力フィールドが残りのスペースを埋めるようにする */
+  flex-grow: 1; 
+  /* 必要に応じて最大幅を設定 */
+  max-width: 480px; /* 例: 必要に応じて調整 */
+}
+
+#requestform_title{
+  margin-left: 30px;
+  margin-bottom: 20px;
+  border-left: 8px solid lightgray;
+  padding-left: 8px;
+  font-size: 20px;
+}
+
+/* 氏名注意書きのスタイル調整 */
+#name_attention {
+  margin-left: 240px; /* ラベルの幅 + margin-right に合わせる */
+  font-size: 0.9em;
+  color: #666;
+}
+
+button {
+  margin-top: 20px;
+  margin-left: 180px;
+  width: 80px;
+  height: 30px;
+}
+
+.list{
+  margin-top: 20px;
+  margin-left: 200px;
+  padding-top: 15px;
+  border-top: 1px solid lightgray;
+  width: 78%;
+}
+
+.list_title{
+  margin-left: 30px;
+  margin-bottom: 20px;
+  border-left: 8px solid lightgray;
+  padding-left: 8px;
+  font-size: 20px;
+
+}
+
+
+#reply_inner{
+  margin-left: 40px;
+  display: flex; /* Flexboxを有効にする */
+  flex-direction: row-reverse; 
+  flex-wrap: nowrap; /* 子要素を折り返さないようにする（重要！） */
+  overflow-x: auto; /* 横方向のスクロールバーは表示 */
+  width: 100%;
+  gap: 10px; /* 各要素間のスペース */
+
+}
+
+.eachrequest {
+    border-right: 1px solid #ccc; /* 見やすくするためのボーダー */
+    flex-shrink: 0; /* スペースが足りなくても縮まないようにする（重要！） */
+    width: 360px;
+    height: 280px;
+}
+
+.eachrequest p {
+  margin: 5px 0 5px 0 ;
+
+}
+
+
+#recommend_inner{
+  margin-left: 40px;
+  display: flex; /* Flexboxを有効にする */
+ flex-direction: row-reverse; 
+  flex-wrap: nowrap; /* 子要素を折り返さないようにする（重要！） */
+  overflow-x: auto; /* 横方向のスクロールバーは表示 */
+  width: 100%;
+  gap: 10px; /* 各要素間のスペース */
+}
+
+
+.eachintro {
+    border-right: 1px solid #ccc; /* 見やすくするためのボーダー */
+    flex-shrink: 0; /* スペースが足りなくても縮まないようにする（重要！） */
+    width: 360px;
+    height: 480px;
+}
+
+.eachintro p {
+  margin: 10px 0 10px 0 ;
+
+}
+
+.imgsize{
+  width: 200px;
+  height: 200px;
+  object-fit: contain; /* または cover */
+}
+
+
+
+
+
+
+.administratorlink{
+  text-align: right;
+  margin-top: 5px;
+}
+
+
+
+a {
+
+  color: inherit;        /* 現在の文字色を継承する（または好きな色でもOK） */
+}
+
+
+a:active,
+a:hover,
+a:visited
+ {
+  color: inherit;        /* 状態が変わっても色を変えない */
+
+}
+
+
+
+
+

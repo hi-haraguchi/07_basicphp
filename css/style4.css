@@ -1,0 +1,82 @@
+body {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1{
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.titledetail{
+  margin: 20px 0 10px 30px ;
+  font-size: 18px;
+}
+
+.header_detail{
+  font-size: 24px;
+  margin: 50px 0 30px 20px;
+  border-left: 8px solid lightgray;
+  padding-left: 8px;
+}
+
+table {
+  width: 100%; /* テーブル全体の幅を親要素に合わせる */
+  font-size: 16px; /* フォントサイズを16pxに設定 */
+  border-collapse: collapse; /* セルの境界線を結合して単一の線にする */
+  height: 300px; /* 表全体の高さを300pxに固定 */
+  display: block; /* テーブルをブロック要素として扱い、高さとoverflowを適用可能にする */
+  overflow-y: scroll; /* 縦方向にスクロールできるようにする */
+  margin: 20px  0;
+}
+
+thead {
+  /* ヘッダー部分はスクロールしないように固定 */
+  display: table-header-group; /* theadをテーブルヘッダーとして表示 */
+  position: sticky; /* スクロールしてもヘッダーが上部に固定されるようにする */
+  top: 0; /* 上部に固定 */
+  background-color: #fff; /* スクロール時に下のコンテンツが透けないように背景色を設定 */
+  z-index: 1; /* 他のコンテンツの上に表示されるようにする */
+}
+
+th, td {
+  padding: 10px 16px; /* 上下10px、左右16pxのパディング */
+  text-align: center; /* テキストを左寄せにする（デフォルトは中央寄せの場合もあるため明示） */
+  border-bottom: 1px solid #ccc; /* 下方向のみ罫線（薄いグレー） */
+  width: 280px;
+}
+
+/* 最後の行の罫線をなくす場合（<tbody>内の最後の<tr>に適用） */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+
+
+
+
+
+.cluc{
+  font-size: 20px;
+  margin: 20px 0 20px 20px;
+}
+
+
+
+
+
+
+
+a {
+  color: inherit;        /* 現在の文字色を継承する（または好きな色でもOK） */
+}
+
+
+a:active,
+a:visited
+ {
+  color: inherit;        /* 状態が変わっても色を変えない */
+}
