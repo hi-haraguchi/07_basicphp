@@ -42,8 +42,20 @@
         <textarea id="introduce" name="introduce" rows="4" cols="30"></textarea>
       </div>
       <div class="form-group">
-        <label for="kind">種類:</label> 
-        <input type="text" id="kind" name="kind">
+          <label for="kind">種類:</label>
+          <select id="kind" name="kind">
+              <option value="">選択してください</option>
+              <option value="0：総記">0：総記</option>
+              <option value="1：哲学">1：哲学</option>
+              <option value="2：歴史">2：歴史</option>
+              <option value="3：社会科学">3：社会科学</option>
+              <option value="4：自然科学">4：自然科学</option>
+              <option value="5：技術・工学">5：技術・工学</option>
+              <option value="6：産業">6：産業</option>
+              <option value="7：芸術・美術">7：芸術・美術</option>
+              <option value="8：言語">8：言語</option>
+              <option value="9：文学">9：文学</option>
+          </select>
       </div>
       <div class="form-group">
         <label for="isbn13">ISBN（13桁）:</label> 

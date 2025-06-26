@@ -22,7 +22,7 @@ h1{
   padding-left: 8px;
 }
 
-table {
+#purchaselist table {
   width: 100%; /* テーブル全体の幅を親要素に合わせる */
   font-size: 16px; /* フォントサイズを16pxに設定 */
   border-collapse: collapse; /* セルの境界線を結合して単一の線にする */
@@ -32,7 +32,7 @@ table {
   margin: 20px  0;
 }
 
-thead {
+#purchaselist thead {
   /* ヘッダー部分はスクロールしないように固定 */
   display: table-header-group; /* theadをテーブルヘッダーとして表示 */
   position: sticky; /* スクロールしてもヘッダーが上部に固定されるようにする */
@@ -41,28 +41,123 @@ thead {
   z-index: 1; /* 他のコンテンツの上に表示されるようにする */
 }
 
-th, td {
+#purchaselist th, td {
   padding: 10px 16px; /* 上下10px、左右16pxのパディング */
-  text-align: center; /* テキストを左寄せにする（デフォルトは中央寄せの場合もあるため明示） */
+  text-align: left; /* テキストを左寄せにする（デフォルトは中央寄せの場合もあるため明示） */
   border-bottom: 1px solid #ccc; /* 下方向のみ罫線（薄いグレー） */
   width: 280px;
 }
 
+
 /* 最後の行の罫線をなくす場合（<tbody>内の最後の<tr>に適用） */
-tbody tr:last-child td {
+#purchaselist tbody tr:last-child td {
   border-bottom: none;
 }
-
-
-
-
-
-
-
-.cluc{
-  font-size: 20px;
-  margin: 20px 0 20px 20px;
+#purchaselist th:nth-child(1),
+#purchaselist td:nth-child(1),
+#purchaselist th:nth-child(2),
+#purchaselist td:nth-child(2){
+   width: 32%;
 }
+
+#purchaselist th:nth-child(4),
+#purchaselist td:nth-child(4){
+   text-align: right;
+}
+
+
+
+/* テーブルコンテナのスタイル - これはidを持つdivなので、変更なし */
+#table_container {
+    display: flex; /* 子要素（テーブル）を横並びにする */
+    gap: 30px; /* テーブル間の隙間 */
+    justify-content: center; /* コンテナ内でテーブルを中央に寄せる */
+    align-items: flex-start; /* テーブルの開始位置を上端に揃える */
+    margin: 40px auto; /* 上下の余白と左右中央寄せ */
+    max-width: 1200px; /* コンテナの最大幅 */
+    padding: 0 20px; /* 左右のパディング */
+}
+
+/* --- #table_container内のテーブルにのみ適用される共通スタイル --- */
+/* #table_container内の全てのtable要素に適用 */
+#table_container table {
+    border-collapse: collapse; /* セルの境界線を結合 */
+    background-color: #ffffff; /* 背景色を白に */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* ほんのりとした影 */
+    border-radius: 6px; /* 角を軽く丸くする */
+    overflow: hidden; /* 角丸からはみ出る内容を隠す */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 読みやすいフォント */
+    color: #333; /* 標準の文字色 */
+    /* #table_container内のテーブルなので、margin-bottomは不要か調整 */
+}
+
+/* #table_container内の全てのthとtdに適用 */
+#table_container th,
+#table_container td {
+    padding: 10px 15px; /* セル内の余白 */
+    border: 1px solid #e9e9e9; /* 薄いグレーの罫線 */
+    text-align: left; /* テキストはデフォルトで左寄せ */
+    vertical-align: middle; /* 垂直方向の中央揃え */
+}
+
+/* #table_container内の全てのthに適用 */
+#table_container th {
+    background-color: #f8f8f8; /* ヘッダーの背景色 */
+    font-weight: bold; /* ヘッダーの文字を太字に */
+    color: #555; /* ヘッダーの文字色を少し暗く */
+}
+
+/* #table_container内の全ての偶数行に適用 */
+#table_container tbody tr:nth-child(even) {
+    background-color: #fcfcfc; /* 偶数行の背景色をさらに薄く */
+}
+
+/* --- #table_container内の個別テーブルスタイル --- */
+
+/* 左側のテーブル (#table_left) のスタイル */
+#table_container #table_left { /* より具体的に指定 */
+    flex: 0 0 400px; /* 固定幅を設定し、伸縮しないようにする */
+    width: 380px; /* 最小幅 */
+}
+
+#table_container #table_left td:first-child {
+    font-weight: bold; /* 1列目を太字に */
+    width: 45%; /* 1列目の幅を調整 */
+    white-space: nowrap; /* テキストの折り返しを防ぐ */
+}
+
+#table_container #table_left td:nth-child(2) {
+    width: 40%; 
+    text-align: right;
+
+}
+
+/* 右側のテーブル (#table_right) のスタイル */
+#table_container #table_right { 
+    width: 580px; 
+}
+
+#table_container #table_right th,
+#table_container #table_right td {
+    text-align: center; /* 右テーブルのセルは中央寄せに */
+}
+
+/* 右側のテーブルの最初の列（分類）だけ左寄せにする場合 */
+#table_container #table_right td:first-child {
+    text-align: left;
+    font-weight: bold; /* 分類名も太字にする */
+    width: 25%; /* 分類列の幅調整 */
+}
+
+#table_container #table_right th:nth-child(3),
+#table_container #table_right td:nth-child(3),
+#table_container #table_right th:nth-child(4),
+#table_container #table_right td:nth-child(4){
+    width: 25%; /* 割合列の幅調整 */
+}
+
+
+
 
 
 
